@@ -5,6 +5,8 @@ const server = http.createServer((req, res) => {
     if (req.url === "/json") {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
+        res.write("RESUME")
+        res.write(JSON.stringify({}))
         res.end(JSON.stringify({
             "personal_info": {
               "name": "Jeeru Praveen",
